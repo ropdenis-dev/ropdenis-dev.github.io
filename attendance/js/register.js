@@ -2,6 +2,7 @@ console.log("register.js loaded");
 let btncreate = document.getElementById('btncreate')
 
 btncreate.addEventListener('click', () =>{
+    alert("Button clicked");
  let txtfname = document.getElementById("txtfname").value
  let txtlname = document.getElementById("txtlname").value
  let txtemail = document.getElementById("txtemail").value
@@ -38,4 +39,4 @@ btncreate.addEventListener('click', () =>{
   	}
   }
 
-}) 
+});
