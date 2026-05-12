@@ -6,7 +6,7 @@ btncreate.addEventListener('click', () =>{
  let txtlname = document.getElementById("txtlname").value
  let txtemail = document.getElementById("txtemail").value
  let txtpass = document.getElementById("txtpass").value
- let txtconpass = document.getElementById("txtconpass").value
+ let txtconpass = document.getElementById("txtcompass").value
 
   if(txtfname == "" || txtemail == "" || txtpass == ""){
   	alert("Name and email be filled")
