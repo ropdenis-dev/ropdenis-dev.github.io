@@ -1,3 +1,4 @@
+console.log("register.js loaded");
 let btncreate = document.getElementById('btncreate')
 
 btncreate.addEventListener('click', () =>{
