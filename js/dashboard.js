@@ -1,0 +1,51 @@
+let lbtoTotalStudents= document.getElementById("lbtoTotalStudents")
+firebase.database().ref("userDetails").once("value", function (snapshot) {
+	let total = 0
+	snapshot.forEach(function(childSnapshot) {
+		let data = childSnapshot.val()
+		total ++
+
+	})
+	lbtoTotalStudents.innerHTML = total
+})
+//count total courses
+
+let lbtoTotalCourses= document.getElementById("lbtoTotalCourses")
+firebase.database().ref("Courses").once("value", function (snapshot) {
+	let total = 0
+	snapshot.forEach(function(childSnapshot) {
+		let data = childSnapshot.val()
+		total ++
+
+	})
+		lbtoTotalCourses.innerHTML = total
+})
+
+//count total lecturers
+
+let lbtoTotalLecturers= document.getElementById("lbtoTotalLecturers")
+firebase.database().ref("userDetails").once("value", function (snapshot) {
+	let total = 0
+	snapshot.forEach(function(childSnapshot) {
+		let data = childSnapshot.val()
+		if(data.Role =="Admin"){
+			total++
+		}
+
+	})
+		lbtoTotalLecturers.innerHTML = total
+})
+//Total Pending Approvals
+let lbtoTotalApprovals= document.getElementById("lbtoTotalApprovals")
+firebase.database().ref("userDetails").once("value", function (snapshot) {
+	let total = 0
+	snapshot.forEach(function(childSnapshot) {
+		let data = childSnapshot.val()
+		if(data.Status =="inactive"){
+			total++
+		}
+
+	})
+		lbtoTotalApprovals.innerHTML = total
+})
+
